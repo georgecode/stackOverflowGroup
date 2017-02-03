@@ -10,8 +10,14 @@ post '/users' do
   p params
   p "*****************"
   @user = User.new(params)
-  @user.save
-  erb :'/users/new'
+
+  if @user.save
+    session[:user_id] = @user.id
+    redirect :'/users/#{@user.id}'
+  else
+    @error = "yo shit fucked up"
+    erb :'/users/new'
+  end
 end
 
 # get '/users/:id' do
