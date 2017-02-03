@@ -9,7 +9,7 @@ end
 5.times do
 Question.create!(
     q_title: Faker::Internet.user_name,
-    user_id: rand(1..5)
+    user_id: User.all.sample.id
   )
 end
 
@@ -19,7 +19,7 @@ end
 5.times do
 Answer.create!(
     a_title: Faker::Internet.user_name,
-    user_id: rand(1..5),
+    user_id: User.all.sample.id,
     question_id: rand(1..5)
 
   )
