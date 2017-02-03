@@ -33,7 +33,11 @@ get '/users/:id' do
   p @user
   p '###################'
   if @user.id == session[:user_id]
-
+  u = session[:user_id]
+  p "---------------------"
+  puts @user.questions
+  p "---------------------"
+  @questions = @user.questions
   erb :'/users/show'
   else
     # if you try to access a user thats not you
