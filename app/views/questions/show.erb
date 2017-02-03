@@ -5,7 +5,7 @@
 <ul>
   <% @answers.each do |ans|%>
     <li>
-      <%=ans.a_title%>
+      <%=erb :"votes/_vote_answer", locals:{answer: ans}%><%=ans.a_title%>
     </li>
   <%end%>
 </ul>
