@@ -5,8 +5,14 @@ get'/users/new' do
   erb :'users/new'
 end
 
-# post '/users' do
-# end
+post '/users' do
+  p "*****************"
+  p params
+  p "*****************"
+  @user = User.new(params)
+  @user.save
+  erb :'/users/new'
+end
 
 # get '/users/:id' do
 # end
