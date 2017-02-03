@@ -1,0 +1,10 @@
+<h2>One question</h2>
+<h3><%=@question.q_title %></h3>
+<ul>
+  <% @answers.each do |ans|%>
+    <li>
+      <%=ans.a_title%>
+    </li>
+  <%end%>
+</ul>
+<%=erb :"answers/new"%>
