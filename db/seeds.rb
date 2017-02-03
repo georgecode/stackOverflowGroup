@@ -2,7 +2,7 @@
 User.create!(
     name: Faker::Internet.user_name,
     email: Faker::Internet.email,
-    password_hash: "password"
+    password: "password"
   )
 end
 

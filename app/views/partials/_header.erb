@@ -1,6 +1,25 @@
+
 <h1>This is partial header</h1>
 <nav>
-  <a href="#">Home</a>
-  <a href="login/new">Login</a>
-  <a href="users/new">Sign Up</a>
+  <%if session[:user_id] !=nil%>
+    <form action="/logout" method="POST" id="logoutForm">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="LogOut">
+    <form>
+  <%else%>
+    <a href="#">Home</a>
+    <a href="login/new">Login</a>
+    <a href="users/new">Sign Up</a>
+  <%end%>
 </nav>
+
+
+<!-- # <%#if session[:user_id] !=nil%>
+#   <form action="/logout" method="POST" id="logoutForm">
+#   <input type="hidden" name="_method" value="DELETE">
+#   <input type="submit" value="LogOut">
+#   <form>
+# <%#else%>
+#   <a href="/login/new">login</a>
+#   <a href="/users/new">sign up</a>
+# <%#end%> -->

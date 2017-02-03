@@ -10,18 +10,36 @@ post '/users' do
   p params
   p "*****************"
   @user = User.new(params)
-
+  p @user
+  p "*****************"
   if @user.save
+
     session[:user_id] = @user.id
-    redirect :'/users/#{@user.id}'
+    redirect :"/users/#{@user.id}"
   else
     @error = "yo shit fucked up"
     erb :'/users/new'
   end
 end
 
-# get '/users/:id' do
-# end
+get '/users/:id' do
+  # p "XXXXXXXXXXXXXXXXXX"
+  # p "hit user/:id route"
+  # p "XXXXXXXXXXXXXXXXXX"
+  # redirect :'/'
+    #gets params from url
+  @user = User.find(params[:id])
+  p '###################'
+  p @user
+  p '###################'
+  if @user.id == session[:user_id]
+
+  erb :'/users/show'
+  else
+    # if you try to access a user thats not you
+    p "nice try mr.robot"
+  end
+end
 
 # get '/users/:id/edit' do
 # end
