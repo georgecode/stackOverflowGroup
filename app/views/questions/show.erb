@@ -1,5 +1,7 @@
 <h2>One question</h2>
 <h3><%=@question.q_title %></h3>
+<%= erb :"votes/_vote_question" %>
+<p>votes: <%= @question.votes.count %></p>
 <ul>
   <% @answers.each do |ans|%>
     <li>
