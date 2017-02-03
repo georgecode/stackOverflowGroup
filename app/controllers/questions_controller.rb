@@ -22,3 +22,16 @@ get '/questions/:id' do
   @answers = @question.answers
   erb :"questions/show"
 end
+
+post '/questions/:id/vote' do
+  @vote = Vote.new
+  @question = Question.find(params[:id])
+  @vote.votable_id = @question.id
+  @vote.votable_type = "Question"
+  
+  if @vote.save
+    redirect "/questions/#{@question.id}"
+  else
+    redirect '/questions'
+  end
+end
