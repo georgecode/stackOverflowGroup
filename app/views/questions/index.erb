@@ -1,9 +1,11 @@
-<h2>All Questions</h2>
-<%= erb :"questions/new"%>
-<ul>
-<%@questions.each do |question|%>
-  <li>
-  <a href="/questions/<%=question.id%>"><%=question.q_title%></a>
-  </li>
-<%end%>
-</ul>
+<article class="view questions index">
+  <h2>All Questions</h2>
+  <%= erb :"questions/new"%>
+  <ul>
+  <%@questions.each do |question|%>
+    <li>
+    <a href="/questions/<%=question.id%>"><%=question.q_title%></a>
+    </li>
+  <%end%>
+  </ul>
+</article>
