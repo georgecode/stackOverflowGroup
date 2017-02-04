@@ -1,5 +1,5 @@
 <article class="votes _vote_answer">
-  <form action="/answers/<%=answer.id%>/vote" method="post">
-  	<input type="submit" value="<%=answer.votes.count%>">
+  <form id="answer-button-form" action="/answers/<%=answer.id%>/vote" method="post">
+  	<input id="vote-button-answer" type="submit" value="<%=answer.votes.count%>">
   </form>
 </article>
