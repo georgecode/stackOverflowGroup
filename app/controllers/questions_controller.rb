@@ -32,7 +32,7 @@ post '/questions/:id/vote' do
 
   if @vote.save
     if request.xhr?
-      @answer.votes.count.to_s
+      @question.votes.count.to_s
     else
       redirect "/questions/#{@question.id}"
     end 
