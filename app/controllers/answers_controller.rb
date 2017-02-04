@@ -20,9 +20,12 @@ post '/answers/:id/vote' do
   @vote.votable_id = @answer.id
   @vote.votable_type = "Answer"
 
-  
   if @vote.save
-    redirect "/questions/#{@question.id}"
+    if request.xhr?
+      @answer.votes.count.to_s
+    else
+      redirect "/questions/#{@question.id}"
+    end 
   else
     redirect '/questions'
   end
