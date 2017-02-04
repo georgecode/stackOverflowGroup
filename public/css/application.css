@@ -1,7 +1,100 @@
-header{
-  background-color: pink;
+/*#173e43 darkblue rgba(23, 62, 67, 1)*/
+/*#3fb0ac lightblue rgba(63, 176, 172, 1)*/
+/*#fae596 yellow rgba(250, 229, 150, 1)*/
+/*#dddfd4 grey rgba(221, 223, 212, 1)*/
+
+/*font-family: 'Barrio', cursive;
+font-family: 'Bahiana', cursive;*/
+body{
+  background: url(../images/crazyFade.png);
+  background-size: cover;
 }
 
+a{
+  text-decoration: none;
+}
+header a{
+  color:white;
+  margin-right: 20px;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+header a:hover{
+color: #fae596;
+border-bottom:3px #fae596 solid;
+}
+
+header{
+  background-color: rgba(63, 176, 172, 1);
+  margin-top: -10px;
+  padding-top: 10px;
+  height:212px;
+
+
+}
+.title{
+  text-align: center;
+  color:white;
+/*  font-family: 'Barrio', cursive;*/
+  font-family: 'Bahiana', cursive;
+  font-size: 4em;
+}
+
+/*.title2{
+  text-align: center;
+  color:white;
+  font-family: 'Barrio', cursive;
+  font-family: 'Bahiana', cursive;
+  font-size: 3em;
+}*/
+
+.davis{
+  display: block;
+  margin-left: 20px;
+  width:100px;
+  height:150px;
+  background: url(../images/davisAlpha.png);
+  background-size: cover;
+  margin-top: -152px;
+  margin-bottom: 20px;
+
+  /*float:left;*/
+
+}
+
+nav{
+  position:relative;
+  bottom:0;
+}
 .error{
   color:red;
+}
+
+.view{
+  margin-top: 20px;
+  text-align: center;
+  width:80%;
+  margin-right:10%;
+  margin-left: 10%;
+  border: solid black 1px;
+  border-radius: 10px;
+  /*background-color: rgba(250, 229, 150, 0.2)*/
+  background-color: rgba(255, 255, 255, 0.2)
+
+}
+
+.questions li{
+list-style-type:none;
+text-align: left;
+color:black;
+font-size: 1.8em;
+}
+.questions li{
+  margin-bottom: 20px;
+}
+.questions li a{
+  color:black;
+}
+.questions li a:hover{
+  border-bottom:3px black solid;
 }
