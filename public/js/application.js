@@ -4,4 +4,12 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+//   $('.davis').on('click',function(){
+//     $('.davis2').html(
+//       <audio>
+//   <source src="../images/Supbrah.mp3" type="audio/mp3">
+// </audio>)
+
+//   })
 });
