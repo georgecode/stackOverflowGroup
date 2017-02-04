@@ -5,6 +5,11 @@
 
 /*font-family: 'Barrio', cursive;
 font-family: 'Bahiana', cursive;*/
+body{
+  background: url(../images/crazyFade.png);
+  background-size: cover;
+}
+
 a{
   text-decoration: none;
 }
@@ -54,4 +59,33 @@ nav{
 }
 .error{
   color:red;
+}
+
+.view{
+  margin-top: 20px;
+  text-align: center;
+  width:80%;
+  margin-right:10%;
+  margin-left: 10%;
+  border: solid black 1px;
+  border-radius: 10px;
+  /*background-color: rgba(250, 229, 150, 0.2)*/
+  background-color: rgba(255, 255, 255, 0.2)
+
+}
+
+.questions li{
+list-style-type:none;
+text-align: left;
+color:black;
+font-size: 1.8em;
+}
+.questions li{
+  margin-bottom: 20px;
+}
+.questions li a{
+  color:black;
+}
+.questions li a:hover{
+  border-bottom:3px black solid;
 }

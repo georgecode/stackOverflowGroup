@@ -1,4 +1,3 @@
 get '/' do
-  erb :index
-  # redirect '/questions'
+  redirect '/questions'
 end

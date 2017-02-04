@@ -1,0 +1,5 @@
+<article class="votes _vote_question">
+  <form action="/questions/<%=@question.id%>/vote" method="post">
+  	<input type="submit" value="<%=@question.votes.count%>">
+  </form>
+</article>
